@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -27,5 +28,11 @@ public class UserController {
             return (User) user.get();
         }
         return null;
+    }
+
+    @GetMapping("/users")
+    public List<User> getUsers() {
+        List<User> users = userService.getUsers();
+        return users;
     }
 }
