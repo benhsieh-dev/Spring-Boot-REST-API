@@ -15,4 +15,9 @@ public class GreetingController {
         return "Let's have fun";
     }
 
+//    @RequestMapping("/Hello")
+//    public String greeting() {
+//        return "Hello World";
+//    }
+
 }
